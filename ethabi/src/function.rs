@@ -7,7 +7,7 @@
 // except according to those terms.
 
 //! Contract function call builder.
-
+#![cfg(feature = "sha3")]
 use crate::{
 	decode, encode, signature::short_signature, Bytes, Error, Param, ParamType, Result, StateMutability, Token,
 };

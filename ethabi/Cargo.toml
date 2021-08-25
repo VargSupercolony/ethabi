@@ -13,7 +13,7 @@ name = "ethabi"
 version = "14.1.0"
 
 [features]
-default = ["std"]
+default = ["std", "sha3"]
 
 std = [
 	"anyhow/std",
@@ -31,7 +31,7 @@ ethereum-types = { version = "0.12.0", default-features = false }
 hex            = { version = "0.4.3", default-features = false, features = ["alloc"] }
 serde          = { version = "1.0.126", features = ["derive"], optional = true }
 serde_json     = { version = "1.0.64", optional = true }
-sha3           = { version = "0.9.1", default-features = false }
+sha3           = { version = "0.9.1", default-features = false, optional = true }
 thiserror      = { version = "1.0.26", optional = true }
 uint           = { version = "0.9.1", default-features = false }
 

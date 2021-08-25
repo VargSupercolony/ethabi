@@ -7,6 +7,7 @@
 // except according to those terms.
 
 //! Contract event.
+#![cfg(feature = "sha3")]
 
 #[cfg(not(feature = "std"))]
 use alloc::{collections::BTreeMap, string::String, vec::Vec};

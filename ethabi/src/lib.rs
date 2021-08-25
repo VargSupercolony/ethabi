@@ -42,17 +42,20 @@ mod util;
 mod tests;
 
 pub use ethereum_types;
+#[cfg(feature = "sha3")]
+pub use crate::event::Event;
+#[cfg(feature = "sha3")]
+pub use crate::function::Function;
+#[cfg(feature = "sha3")]
+pub use crate::contract::{Contract, Events, Functions};
 
 pub use crate::{
 	constructor::Constructor,
-	contract::{Contract, Events, Functions},
 	decoder::decode,
 	encoder::encode,
 	errors::{Error, Result},
-	event::Event,
 	event_param::EventParam,
 	filter::{RawTopicFilter, Topic, TopicFilter},
-	function::Function,
 	log::{Log, LogFilter, LogParam, ParseLog, RawLog},
 	param::Param,
 	param_type::ParamType,

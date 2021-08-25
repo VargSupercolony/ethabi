@@ -5,7 +5,7 @@
 // <LICENSE-MIT or http://opensource.org/licenses/MIT>, at your
 // option. This file may not be copied, modified, or distributed
 // except according to those terms.
-
+#![cfg(feature = "sha3")]
 #[cfg(feature = "std")]
 use crate::operation::Operation;
 use crate::{errors, Constructor, Error, Event, Function};
