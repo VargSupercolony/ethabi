@@ -18,22 +18,11 @@ extern crate alloc;
 #[cfg(not(feature = "std"))]
 use alloc::vec::Vec;
 
-mod constructor;
-mod contract;
 mod decoder;
 mod encoder;
 mod errors;
-mod event;
-mod event_param;
-mod filter;
-mod function;
-mod log;
-#[cfg(feature = "std")]
-mod operation;
 mod param;
 pub mod param_type;
-mod signature;
-mod state_mutability;
 pub mod token;
 mod tuple_param;
 mod util;
@@ -42,24 +31,13 @@ mod util;
 mod tests;
 
 pub use ethereum_types;
-#[cfg(feature = "sha3")]
-pub use crate::event::Event;
-#[cfg(feature = "sha3")]
-pub use crate::function::Function;
-#[cfg(feature = "sha3")]
-pub use crate::contract::{Contract, Events, Functions};
 
 pub use crate::{
-	constructor::Constructor,
 	decoder::decode,
 	encoder::encode,
 	errors::{Error, Result},
-	event_param::EventParam,
-	filter::{RawTopicFilter, Topic, TopicFilter},
-	log::{Log, LogFilter, LogParam, ParseLog, RawLog},
 	param::Param,
 	param_type::ParamType,
-	state_mutability::StateMutability,
 	token::Token,
 	tuple_param::TupleParam,
 };
